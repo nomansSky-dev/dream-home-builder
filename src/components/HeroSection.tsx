@@ -35,55 +35,55 @@ export const HeroSection = () => {
           {/* Right Side - Search Card */}
           <div className="w-full lg:w-auto lg:max-w-sm bg-card/50 backdrop-blur-sm rounded-2xl p-4 shadow-2xl">
             {/* Card Header */}
-            <div className="mb-5">
-              <h2 className="font-heading text-xl font-bold text-foreground">
+            <div className="mb-3">
+              <h2 className="font-heading text-lg font-bold text-foreground">
                 Finding your Best Property
               </h2>
-              <p className="text-muted-foreground text-sm">What you want!</p>
+              <p className="text-muted-foreground text-xs">What you want!</p>
             </div>
 
             {/* Location */}
-            <div className="space-y-2 mb-4">
+            <div className="space-y-1 mb-2">
               <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Location</label>
-              <button className="w-full flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors">
-                <MapPin className="h-4 w-4 text-sage" />
+              <button className="w-full flex items-center gap-2 px-3 py-2 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors text-sm">
+                <MapPin className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">Brisbane, Australia</span>
               </button>
             </div>
 
             {/* Property Type */}
-            <div className="space-y-2 mb-4">
+            <div className="space-y-1 mb-2">
               <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Property Type</label>
-              <button className="w-full flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors">
-                <Building className="h-4 w-4 text-sage" />
+              <button className="w-full flex items-center gap-2 px-3 py-2 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors text-sm">
+                <Building className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">Apartment Name</span>
-                <ChevronDown className="h-4 w-4 text-muted-foreground ml-auto" />
+                <ChevronDown className="h-3.5 w-3.5 text-muted-foreground ml-auto" />
               </button>
             </div>
 
             {/* Specs Row */}
-            <div className="flex gap-2 mb-4">
-              <button className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-background border border-border rounded-lg text-sm hover:border-sage transition-colors">
-                <Bed className="h-4 w-4 text-sage" />
+            <div className="flex gap-1.5 mb-2">
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
+                <Bed className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">3 Beds</span>
               </button>
-              <button className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-background border border-border rounded-lg text-sm hover:border-sage transition-colors">
-                <Bath className="h-4 w-4 text-sage" />
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
+                <Bath className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">4 showers</span>
               </button>
-              <button className="flex-1 flex items-center justify-center gap-1.5 px-3 py-2.5 bg-background border border-border rounded-lg text-sm hover:border-sage transition-colors">
-                <Square className="h-4 w-4 text-sage" />
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
+                <Square className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">6 x 3 m2</span>
               </button>
             </div>
 
             {/* Max Price */}
-            <div className="space-y-2 mb-5">
+            <div className="space-y-1 mb-3">
               <label className="text-xs font-medium text-muted-foreground uppercase tracking-wider">Max Price</label>
-              <button className="w-full flex items-center gap-3 px-4 py-3 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors">
-                <DollarSign className="h-4 w-4 text-sage" />
+              <button className="w-full flex items-center gap-2 px-3 py-2 bg-background border border-border rounded-lg text-left hover:border-sage transition-colors text-sm">
+                <DollarSign className="h-3.5 w-3.5 text-sage" />
                 <span className="text-foreground">799.00 max</span>
-                <ChevronDown className="h-4 w-4 text-muted-foreground ml-auto" />
+                <ChevronDown className="h-3.5 w-3.5 text-muted-foreground ml-auto" />
               </button>
             </div>
 
