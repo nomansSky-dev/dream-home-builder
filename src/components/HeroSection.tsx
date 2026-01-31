@@ -33,7 +33,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Side - Search Card */}
-          <div className="w-full lg:w-auto lg:max-w-md bg-card/95 backdrop-blur-sm rounded-2xl p-6 shadow-2xl">
+          <div className="w-full lg:w-auto lg:max-w-sm bg-card/50 backdrop-blur-sm rounded-2xl p-4 shadow-2xl">
             {/* Card Header */}
             <div className="mb-5">
               <h2 className="font-heading text-xl font-bold text-foreground">
