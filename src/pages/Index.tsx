@@ -4,6 +4,7 @@ import { TrustedBySection } from "@/components/TrustedBySection";
 import { PopularListingsSection } from "@/components/PopularListingsSection";
 import { PopularCountriesSection } from "@/components/PopularCountriesSection";
 import { FeaturedListingSection } from "@/components/FeaturedListingSection";
+import { TestimonialStatsSection } from "@/components/TestimonialStatsSection";
 
 const Index = () => {
   return (
@@ -14,12 +15,13 @@ const Index = () => {
       <PopularListingsSection />
       <PopularCountriesSection />
       <FeaturedListingSection />
+      <TestimonialStatsSection />
       
-      {/* Placeholder for more sections */}
-      <main className="container mx-auto px-4 py-16">
+      {/* Placeholder for footer */}
+      <main className="container mx-auto px-4 py-8">
         <div className="text-center">
-          <p className="text-muted-foreground">
-            More sections coming soon...
+          <p className="text-muted-foreground text-sm">
+            Footer coming soon...
           </p>
         </div>
       </main>
