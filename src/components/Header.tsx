@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ChevronDown, Menu, X } from "lucide-react";
+import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
@@ -8,11 +8,33 @@ const navItems = [
   { label: "Listing", href: "#", hasDropdown: true },
   { label: "Property", href: "#", hasDropdown: true },
   { label: "Pages", href: "#", hasDropdown: true },
-  { label: "Auth", href: "#", hasDropdown: true },
 ];
 
 export const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check for saved preference or system preference
+    const savedTheme = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    
+    if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setIsDark(!isDark);
+    if (isDark) {
+      document.documentElement.classList.remove("dark");
+      localStorage.setItem("theme", "light");
+    } else {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
@@ -47,6 +69,19 @@ export const Header = () => {
 
           {/* Desktop Actions */}
           <div className="hidden lg:flex items-center gap-4">
+            {/* Dark Mode Toggle */}
+            <button
+              onClick={toggleDarkMode}
+              className="p-2 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-colors"
+              aria-label="Toggle dark mode"
+            >
+              {isDark ? (
+                <Sun className="h-5 w-5" />
+              ) : (
+                <Moon className="h-5 w-5" />
+              )}
+            </button>
+            
             <a
               href="#"
               className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
@@ -91,6 +126,23 @@ export const Header = () => {
                 </a>
               ))}
               <div className="mt-4 px-4 flex flex-col gap-3">
+                {/* Mobile Dark Mode Toggle */}
+                <button
+                  onClick={toggleDarkMode}
+                  className="flex items-center gap-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
+                >
+                  {isDark ? (
+                    <>
+                      <Sun className="h-5 w-5" />
+                      Light Mode
+                    </>
+                  ) : (
+                    <>
+                      <Moon className="h-5 w-5" />
+                      Dark Mode
+                    </>
+                  )}
+                </button>
                 <a
                   href="#"
                   className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
