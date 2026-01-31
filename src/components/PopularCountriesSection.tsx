@@ -62,12 +62,11 @@ export const PopularCountriesSection = () => {
 
           {/* Countries */}
           <div className="flex-1 flex justify-center gap-8 lg:gap-12 overflow-hidden">
-            {visibleCountries.map((country, index) => (
+            {visibleCountries.map((country) => (
               <a
                 key={country.id}
                 href="#"
-                className="group flex flex-col items-center opacity-0 animate-[fade-in_0.4s_ease-out_forwards]"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className="group flex flex-col items-center transition-all duration-300 ease-out"
               >
                 {/* Circular Image */}
                 <div className="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-card-accent group-hover:border-sage transition-colors duration-300 shadow-lg">
