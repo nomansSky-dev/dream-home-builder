@@ -56,7 +56,7 @@ export const Header = () => {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors rounded-md"
+                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors rounded-md"
                 )}
               >
                 {item.label}
@@ -82,10 +82,9 @@ export const Header = () => {
               )}
             </button>
             
-            {/* Login/Signup - Earthy Brown outline style */}
+            {/* Login/Signup - White text with Soft Gold background */}
             <Button 
-              variant="outline"
-              className="font-button border-earthy text-earthy bg-earthy/10 hover:bg-earthy/20 hover:text-earthy rounded-full px-5"
+              className="font-button bg-accent hover:bg-accent/90 text-white rounded-full px-5"
             >
               Login/Signup
             </Button>
@@ -120,7 +119,7 @@ export const Header = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="flex items-center justify-between px-4 py-3 text-sm font-medium text-foreground/80 hover:text-foreground hover:bg-muted/50 rounded-md transition-colors"
+                  className="flex items-center justify-between px-4 py-3 text-sm font-medium text-accent hover:text-accent/80 hover:bg-muted/50 rounded-md transition-colors"
                 >
                   {item.label}
                   {item.hasDropdown && (
@@ -147,8 +146,7 @@ export const Header = () => {
                   )}
                 </button>
                 <Button 
-                  variant="outline"
-                  className="font-button border-earthy text-earthy hover:bg-earthy/10 rounded-full w-full"
+                  className="font-button bg-accent hover:bg-accent/90 text-white rounded-full w-full"
                 >
                   Login/Signup
                 </Button>
