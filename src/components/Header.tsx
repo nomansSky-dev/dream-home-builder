@@ -37,14 +37,14 @@ export const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
+    <header className="absolute top-0 left-0 right-0 z-50 w-full">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <div className="flex items-center justify-center w-[50px] h-[25px]">
-              <span className="font-heading font-bold text-lg text-primary tracking-tight">
-                Nest<span className="text-sage">Find</span>
+            <div className="flex items-center justify-center">
+              <span className="font-heading font-bold text-lg text-white tracking-tight">
+                Nest<span className="text-card-accent">Find</span>
               </span>
             </div>
           </a>
@@ -56,7 +56,7 @@ export const Header = () => {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
+                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-white/90 hover:text-white transition-colors rounded-md"
                 )}
               >
                 {item.label}
@@ -68,11 +68,11 @@ export const Header = () => {
           </nav>
 
           {/* Desktop Actions */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             {/* Dark Mode Toggle */}
             <button
               onClick={toggleDarkMode}
-              className="p-2 rounded-md text-foreground/80 hover:text-foreground hover:bg-muted/50 transition-colors"
+              className="p-2 rounded-full text-white/90 hover:text-white hover:bg-white/10 transition-colors"
               aria-label="Toggle dark mode"
             >
               {isDark ? (
@@ -82,14 +82,17 @@ export const Header = () => {
               )}
             </button>
             
-            <a
-              href="#"
-              className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-            >
-              Login / Signup
-            </a>
+            {/* Login/Signup - Earthy Brown outline style */}
             <Button 
-              className="font-button bg-sage hover:bg-sage/90 text-sage-foreground"
+              variant="outline"
+              className="font-button border-earthy text-earthy bg-earthy/10 hover:bg-earthy/20 hover:text-earthy rounded-full px-5"
+            >
+              Login/Signup
+            </Button>
+            
+            {/* Add Listing - Sage Green filled */}
+            <Button 
+              className="font-button bg-sage hover:bg-sage/90 text-sage-foreground rounded-full px-5"
             >
               Add Listing
             </Button>
@@ -97,7 +100,7 @@ export const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 text-foreground"
+            className="lg:hidden p-2 text-white"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -111,7 +114,7 @@ export const Header = () => {
 
         {/* Mobile Navigation */}
         {mobileMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border">
+          <div className="lg:hidden py-4 bg-background/95 backdrop-blur rounded-lg mt-2">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <a
@@ -143,14 +146,14 @@ export const Header = () => {
                     </>
                   )}
                 </button>
-                <a
-                  href="#"
-                  className="text-sm font-medium text-foreground/80 hover:text-foreground transition-colors"
-                >
-                  Login / Signup
-                </a>
                 <Button 
-                  className="font-button bg-sage hover:bg-sage/90 text-sage-foreground w-full"
+                  variant="outline"
+                  className="font-button border-earthy text-earthy hover:bg-earthy/10 rounded-full w-full"
+                >
+                  Login/Signup
+                </Button>
+                <Button 
+                  className="font-button bg-sage hover:bg-sage/90 text-sage-foreground rounded-full w-full"
                 >
                   Add Listing
                 </Button>
