@@ -37,7 +37,7 @@ export const Header = () => {
   };
 
   return (
-    <header className="absolute top-0 left-0 right-0 z-50 w-full">
+    <header className="absolute top-0 left-0 right-0 z-50 w-full bg-primary">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
