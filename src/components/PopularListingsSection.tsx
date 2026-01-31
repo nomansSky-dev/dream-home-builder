@@ -10,6 +10,7 @@ const properties = [
   {
     id: 1,
     image: house1,
+    name: "Georgian Estate",
     price: "$485,000",
     address: "1234 Maple Avenue, Beverly Hills",
     beds: 4,
@@ -19,6 +20,7 @@ const properties = [
   {
     id: 2,
     image: house2,
+    name: "Coastal Haven",
     price: "$1,250,000",
     address: "567 Ocean View Dr, Malibu",
     beds: 5,
@@ -28,6 +30,7 @@ const properties = [
   {
     id: 3,
     image: house3,
+    name: "Tropical Paradise",
     price: "$2,100,000",
     address: "890 Palm Boulevard, Miami",
     beds: 6,
@@ -37,6 +40,7 @@ const properties = [
   {
     id: 4,
     image: house4,
+    name: "Modern Vista",
     price: "$875,000",
     address: "321 Highland Park, Denver",
     beds: 4,
@@ -46,6 +50,7 @@ const properties = [
   {
     id: 5,
     image: house5,
+    name: "Luxe Retreat",
     price: "$1,450,000",
     address: "654 Sunset Ridge, Los Angeles",
     beds: 5,
@@ -55,6 +60,7 @@ const properties = [
   {
     id: 6,
     image: house6,
+    name: "Villa Serene",
     price: "$925,000",
     address: "789 Garden Lane, San Diego",
     beds: 4,
@@ -101,13 +107,15 @@ export const PopularListingsSection = () => {
 
               {/* Content */}
               <div className="p-5">
-                <p className="font-heading text-xl font-bold text-foreground mb-2">
+                <h3 className="font-heading text-lg font-semibold text-foreground mb-1">
+                  {property.name}
+                </h3>
+                <p className="font-heading text-xl font-bold text-sage mb-2">
                   {property.price}
                 </p>
                 <p className="text-muted-foreground text-sm mb-4 line-clamp-1">
                   {property.address}
                 </p>
-
                 {/* Property Details */}
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center gap-1.5">
