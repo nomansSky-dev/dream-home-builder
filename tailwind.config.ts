@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        heading: ["Montserrat", "sans-serif"],
+        body: ["Montserrat", "sans-serif"],
+        button: ["Merriweather Sans", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -46,6 +51,19 @@ export default {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+        },
+        // Custom colors for the real estate theme
+        earthy: {
+          DEFAULT: "hsl(var(--earthy))",
+          foreground: "hsl(var(--earthy-foreground))",
+        },
+        "card-accent": {
+          DEFAULT: "hsl(var(--card-accent))",
+          foreground: "hsl(var(--card-accent-foreground))",
+        },
+        sage: {
+          DEFAULT: "hsl(var(--sage))",
+          foreground: "hsl(var(--sage-foreground))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
