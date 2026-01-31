@@ -16,15 +16,6 @@ const Index = () => {
       <PopularCountriesSection />
       <FeaturedListingSection />
       <TestimonialStatsSection />
-      
-      {/* Placeholder for footer */}
-      <main className="container mx-auto px-4 py-8">
-        <div className="text-center">
-          <p className="text-muted-foreground text-sm">
-            Footer coming soon...
-          </p>
-        </div>
-      </main>
     </div>
   );
 };
