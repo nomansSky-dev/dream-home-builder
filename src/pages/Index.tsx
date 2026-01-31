@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/HeroSection";
 import { TrustedBySection } from "@/components/TrustedBySection";
 import { PopularListingsSection } from "@/components/PopularListingsSection";
 import { PopularCountriesSection } from "@/components/PopularCountriesSection";
+import { FeaturedListingSection } from "@/components/FeaturedListingSection";
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <TrustedBySection />
       <PopularListingsSection />
       <PopularCountriesSection />
+      <FeaturedListingSection />
       
       {/* Placeholder for more sections */}
       <main className="container mx-auto px-4 py-16">
