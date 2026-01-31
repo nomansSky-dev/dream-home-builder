@@ -26,7 +26,7 @@ export const HeroSection = () => {
               Property
             </h1>
             <Button 
-              className="font-button bg-earthy hover:bg-earthy/90 text-earthy-foreground h-12 px-8"
+              className="font-button bg-accent hover:bg-accent/90 text-accent-foreground h-12 px-8"
             >
               Explore All Properties
             </Button>
