@@ -1,6 +1,7 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { TrustedBySection } from "@/components/TrustedBySection";
+import { PopularListingsSection } from "@/components/PopularListingsSection";
 
 const Index = () => {
   return (
@@ -8,6 +9,7 @@ const Index = () => {
       <Header />
       <HeroSection />
       <TrustedBySection />
+      <PopularListingsSection />
       
       {/* Placeholder for more sections */}
       <main className="container mx-auto px-4 py-16">
