@@ -63,17 +63,17 @@ export const HeroSection = () => {
 
             {/* Specs Row */}
             <div className="flex gap-1.5 mb-2">
-              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
-                <Bed className="h-3.5 w-3.5 text-sage" />
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors whitespace-nowrap">
+                <Bed className="h-3.5 w-3.5 text-sage shrink-0" />
                 <span className="text-foreground">3 Beds</span>
               </button>
-              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
-                <Bath className="h-3.5 w-3.5 text-sage" />
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors whitespace-nowrap">
+                <Bath className="h-3.5 w-3.5 text-sage shrink-0" />
                 <span className="text-foreground">4 showers</span>
               </button>
-              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors">
-                <Square className="h-3.5 w-3.5 text-sage" />
-                <span className="text-foreground">6 x 3 m2</span>
+              <button className="flex-1 flex items-center justify-center gap-1 px-2 py-1.5 bg-background border border-border rounded-lg text-xs hover:border-sage transition-colors whitespace-nowrap">
+                <Square className="h-3.5 w-3.5 text-sage shrink-0" />
+                <span className="text-foreground">6 x 3 m²</span>
               </button>
             </div>
 
