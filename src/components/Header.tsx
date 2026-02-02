@@ -56,7 +56,7 @@ export const Header = () => {
                 key={item.label}
                 href={item.href}
                 className={cn(
-                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-accent hover:text-accent/80 transition-colors rounded-md"
+                  "flex items-center gap-1 px-4 py-2 text-sm font-medium text-white hover:text-white/80 transition-colors rounded-md"
                 )}
               >
                 {item.label}
