@@ -1,3 +1,6 @@
+# Bun lockfile (keep for Cloudflare Pages)
+!bun.lockb
+
 # Logs
 logs
 *.log
