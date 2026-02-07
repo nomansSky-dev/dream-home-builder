@@ -63,7 +63,17 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+**Lovable:** Open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click Share → Publish.
+
+**Cloudflare Pages:** This project is set up for [Cloudflare Pages](https://pages.cloudflare.com/).
+
+- **Option A – Connect GitHub:** In [Cloudflare Dashboard](https://dash.cloudflare.com/) → Workers & Pages → Create application → Pages → Connect to Git. Select this repo, then set:
+  - **Build command:** `npm run build` (or `bun run build`)
+  - **Build output directory:** `dist`
+  - Framework preset: **React (Vite)** (optional; it fills the above for you)
+- **Option B – Direct upload:** Run `npm run build` (or `bun run build`), then `npx wrangler pages deploy dist --project-name=dream-home-builder`.
+
+SPA routing works by default (no `404.html`), so client-side routes are handled correctly.
 
 ## Can I connect a custom domain to my Lovable project?
 

@@ -1,0 +1,9 @@
+# Cloudflare Pages - deploy with: npx wrangler pages deploy dist --project-name=dream-home-builder
+# Or connect this repo in Cloudflare Dashboard and use:
+#   Build command: npm run build   (or: bun run build)
+#   Build output directory: dist
+#   Framework preset: React (Vite)
+
+name = "dream-home-builder"
+compatibility_date = "2024-01-01"
+pages_build_output_dir = "dist"
