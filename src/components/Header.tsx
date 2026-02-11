@@ -4,8 +4,8 @@ import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { label: "Home", href: "#", hasDropdown: false },
-  { label: "Listing", href: "#", hasDropdown: true },
+  { label: "Home", href: "/", hasDropdown: false },
+  { label: "Listing", href: "/listing", hasDropdown: false },
   { label: "Property", href: "#", hasDropdown: true },
   { label: "Pages", href: "#", hasDropdown: true },
 ];
