@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, Menu, X, Sun, Moon } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -41,20 +42,20 @@ export const Header = () => {
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="#" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <div className="flex items-center justify-center">
               <span className="font-heading font-bold text-lg text-white tracking-tight">
                 Nest<span className="text-card-accent">Find</span>
               </span>
             </div>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className={cn(
                   "flex items-center gap-1 px-4 py-2 text-sm font-medium text-white hover:text-white/80 transition-colors rounded-md"
                 )}
@@ -63,7 +64,7 @@ export const Header = () => {
                 {item.hasDropdown && (
                   <ChevronDown className="h-4 w-4 opacity-60" />
                 )}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -116,16 +117,16 @@ export const Header = () => {
           <div className="lg:hidden py-4 bg-background/95 backdrop-blur rounded-lg mt-2">
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.label}
-                  href={item.href}
+                  to={item.href}
                   className="flex items-center justify-between px-4 py-3 text-sm font-medium text-accent hover:text-accent/80 hover:bg-muted/50 rounded-md transition-colors"
                 >
                   {item.label}
                   {item.hasDropdown && (
                     <ChevronDown className="h-4 w-4 opacity-60" />
                   )}
-                </a>
+                </Link>
               ))}
               <div className="mt-4 px-4 flex flex-col gap-3">
                 {/* Mobile Dark Mode Toggle */}
