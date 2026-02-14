@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Bed, Bath, Square, ArrowRight } from "lucide-react";
 import house1 from "@/assets/properties/house-1.jpg";
 import house2 from "@/assets/properties/house-2.jpg";
@@ -90,7 +91,8 @@ export const PopularListingsSection = () => {
         {/* Property Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {properties.map((property) => (
-            <div
+            <Link
+              to={`/property/${property.id}`}
               key={property.id}
               className="group bg-card rounded-xl overflow-hidden border border-border hover:border-card-accent transition-all duration-300 hover:shadow-lg"
             >
@@ -132,7 +134,7 @@ export const PopularListingsSection = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
